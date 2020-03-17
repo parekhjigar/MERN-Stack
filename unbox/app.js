@@ -1,15 +1,24 @@
-// Importing express
+// Importing packages
 const express = require('express');
+const mongoose = require('mongoose');
+require('dotenv').config();
+// Importing routes
+const userRoutes = require('./routes/user')
 
-// Invoke express
+// app
 const app = express();
 
-// Importing dotenv
-require('dotenv').config();
+// database
+mongoose
+	.connect(process.env.DATABASE, {
+	useNewUrlParser: true,
+	useCreateIndex: true
+	})
+	.then(() => console.log('Database connected'));
 
-app.get('/', (req, res) => {
-	res.send("Testing server");
-});
+
+// routes middleware
+app.use("/api", userRoutes);
 
 const port = process.env.PORT || 8000
 
