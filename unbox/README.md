@@ -46,4 +46,6 @@ Nodemon automatically restarts the node application when file changes in the dir
 	`$ npm i mongoose`
 
 
+### Installing uuid
 
+	`$ npm i uuid`
