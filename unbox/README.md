@@ -49,3 +49,11 @@ Nodemon automatically restarts the node application when file changes in the dir
 ### Installing uuid
 
 	`$ npm i uuid`
+
+### Installing body-parser
+
+	`$ npm i body-parser`
+
+### Installing morgan
+
+	'$ npm i morgan'
