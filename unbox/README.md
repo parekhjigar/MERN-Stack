@@ -57,3 +57,7 @@ Nodemon automatically restarts the node application when file changes in the dir
 ### Installing morgan
 
 	'$ npm i morgan'
+
+### Installing cookie-parser
+
+	'$ npm i cookie-parser'
