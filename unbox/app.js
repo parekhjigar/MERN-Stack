@@ -16,6 +16,10 @@ mongoose
 	})
 	.then(() => console.log('Database connected'));
 
+// middlewares
+app.use(morgan('dev'));
+app.use(bodyParser.json());
+app.use(cookieParser());
 
 // routes middleware
 app.use("/api", userRoutes);
