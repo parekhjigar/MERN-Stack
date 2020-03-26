@@ -1,9 +1,6 @@
 const mongoose = require('mongoose')
 const crypto = require('crypto')
 const uuidv1 = require('uuid/v1')
-const morgan = require('morgan')
-const bodyParser  =require('body-parser')
-const cookieParser  =require('cookie-parser')
 
 const userSchema = new mongoose.Schema
 	({
@@ -26,7 +23,7 @@ const userSchema = new mongoose.Schema
 		about: {
 			type: String,
 			trim: true,
-		}
+		},
 		salt: String,
 		role: {
 			type: Number,
