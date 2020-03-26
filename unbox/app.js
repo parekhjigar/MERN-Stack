@@ -1,9 +1,13 @@
 // Importing packages
 const express = require('express');
 const mongoose = require('mongoose');
+const morgan = require('morgan');
+const bodyParser  =require('body-parser');
+const cookieParser  =require('cookie-parser');
 require('dotenv').config();
+
 // Importing routes
-const userRoutes = require('./routes/user')
+const userRoutes = require('./routes/user');
 
 // app
 const app = express();
