@@ -33,29 +33,32 @@ const userSchema = new mongoose.Schema
 			type: Array,
 			default: []
 		}
-	}, {timestamps: true}
+	}, 
+	{timestamps: true}
 );
 
 // Virtual field
-userSchema.virtual('password')
-.set(function(password) {
-	this._password = password
-	this.salt = uuidv1()
-	this.hashed_password = this.encryptPassword(password)
+userSchema
+	.virtual('password')
+	.set(function(password) {
+		this._password = password;
+		this.salt = uuidv1();
+		this.hashed_password = this.encryptPassword(password);
 })
 .get(function() {
-	return this.password
+	return this.password;
 })
 
 userSchema.methods = {
 	encryptPassword: function(password) {
-		if(!password) return '';
+		if(!password) return "";
 		try {
-			return crypto.createHmac('sha1', this.salt)
-							.update(password)
-							.digest('hex')
+			return crypto
+				.createHmac('sha1', this.salt)
+				.update(password)
+				.digest('hex');
 		} catch (err) {
-			return ''
+			return "";
 		}
 	}
 };
