@@ -1,9 +1,9 @@
-const mongoose = require('mongoose')
-const crypto = require('crypto')
-const uuidv1 = require('uuid/v1')
+const mongoose = require('mongoose');
+const crypto = require('crypto');
+const uuidv1 = require('uuid/v1');
 
-const userSchema = new mongoose.Schema
-	({
+const userSchema = new mongoose.Schema(
+	{
 		name: {
 			type: String,
 			trim: true,
@@ -14,7 +14,8 @@ const userSchema = new mongoose.Schema
 			type: String,
 			trim: true,
 			required: true,
-			unique: 32
+			unique: true,
+			maxlength: 32
 		},
 		hashed_password: {
 			type: String,
@@ -22,7 +23,7 @@ const userSchema = new mongoose.Schema
 		},
 		about: {
 			type: String,
-			trim: true,
+			trim: true
 		},
 		salt: String,
 		role: {
@@ -33,8 +34,8 @@ const userSchema = new mongoose.Schema
 			type: Array,
 			default: []
 		}
-	}, 
-	{timestamps: true}
+	},
+	{ timestamps: true }
 );
 
 // Virtual field
@@ -47,20 +48,20 @@ userSchema
 })
 .get(function() {
 	return this.password;
-})
+});
 
 userSchema.methods = {
 	encryptPassword: function(password) {
-		if(!password) return "";
+		if(!password) return '';
 		try {
 			return crypto
 				.createHmac('sha1', this.salt)
 				.update(password)
 				.digest('hex');
 		} catch (err) {
-			return "";
+			return '';
 		}
 	}
 };
 
-module.exports = mongoose.model("User", userSchema)
+module.exports = mongoose.model('User', userSchema)
