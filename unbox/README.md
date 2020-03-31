@@ -61,3 +61,7 @@ Nodemon automatically restarts the node application when file changes in the dir
 ### Installing cookie-parser
 
 	`$ npm i cookie-parser`
+
+### Installing express-validator 5.3.1
+
+	`$ npm i express-validator`
