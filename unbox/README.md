@@ -65,3 +65,8 @@ Nodemon automatically restarts the node application when file changes in the dir
 ### Installing express-validator 5.3.1
 
 	`$ npm i express-validator`
+
+### Installing express-jwt
+
+	`$ npm i express-jwt`
+
