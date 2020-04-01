@@ -70,3 +70,6 @@ Nodemon automatically restarts the node application when file changes in the dir
 
 	`$ npm i express-jwt`
 
+### Installing jsonwebtoken
+
+	`$ npm i jsonwebtoken'
