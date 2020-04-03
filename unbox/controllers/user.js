@@ -29,7 +29,11 @@ exports.signin = (req, res) => {
 			});
 		}
 		// Todo: Create authenticate method in user model
-
+		if(!user.authenticate(password)) {
+			return res.status(401).json({
+				error: "Email and password are not matched"
+			});
+		}
 		// Generating a signed token with user id and secret
 		const token = jwt.sign({_id: user._id}, process.env.JWT_SECRET)
 
@@ -40,4 +44,9 @@ exports.signin = (req, res) => {
 		const { _id, name, email, role } = user;
 		return res.json({ token, user: { _id, email, name, role } });
 	});
+};
+
+exports.signout = (req, res) => {
+	res.clearCookie('t')
+	res.json({ message: "Signout successful" });
 };
