@@ -1,6 +1,7 @@
 # Unbox- A MERN Stack webapp
 
 The following project is developed on MacOS Catalina.
+Following packages are required to create the environment for the project.
 
 ## Initializing Package.json
 
