@@ -74,3 +74,11 @@ Nodemon automatically restarts the node application when file changes in the dir
 ### Installing jsonwebtoken
 
 	`$ npm i jsonwebtoken'
+
+### Installing formidable
+
+	`$ npm i formidable'
+
+### Installing lodash
+
+	`$ npm i lodash'
