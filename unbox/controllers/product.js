@@ -13,12 +13,17 @@ exports.create = (req, res) => {
 		if(err) {
 			return res.status(400).json({
 				error: "Image cannot be uploaded"
-			})
+			});
 		}
 		let product = new Product(fields)
 
 		// Name of the photo file
 		if(files.photo) {
+			if(files.photo.size > 1000000) {
+				return res.status(400).json({
+				error: "Image size should be less than 1mb"
+				});
+			}
 			product.photo.data = fs.readFileSync(files.photo.path)
 			product.photo.contentType = files.photo.type
 		}
