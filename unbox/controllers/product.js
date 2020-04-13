@@ -15,6 +15,16 @@ exports.create = (req, res) => {
 				error: "Image cannot be uploaded"
 			});
 		}
+
+		// Check for all input fields
+		const { name, description, price, category, quantity, shipping } = fields
+
+		if(!name || !description || !price || !category || !quantity || !shipping) {
+			return res.status(400).json({
+				error: "All input fields are required!"
+			});
+		}
+
 		let product = new Product(fields)
 
 		// Name of the photo file
