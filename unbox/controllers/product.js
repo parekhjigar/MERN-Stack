@@ -5,7 +5,7 @@ const fs = require("fs");
 const { errorHandler } = require("../helpers/dbErrorHandler");
 const Product = require("../models/product");
 
-exports.productById = (req, res, next) => {
+exports.productById = (req, res, next, id) => {
 	Product.findById(id).exec((err, product) => {
 		if(err || !product) {
 			return res.status(400).json({
