@@ -150,6 +150,29 @@ exports.list = (req, res) => {
 					error: "Products not found"
 				});
 			}
-			res.send(products);
+			res.json(products);
 		});
+};
+
+
+
+// To find related products based on request product category
+// Products with same categories except itself will be returned
+exports.listRelated = (req, res) => {
+	let limit = req.query.limit ? parseInt(req.ruery.limit): 6;
+
+	Product.find({
+		_id: { $ne : req.product },
+		category: req.product.category
+	})
+	.limit(limit)
+	.populate("category", "_id name")
+	.exec((err, products) => {
+		if (err) {
+			return res.status(400).json({
+				error: "Products not found"
+			});
+		}
+		res.json(products);
+	});
 };
