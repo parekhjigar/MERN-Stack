@@ -2,8 +2,23 @@
 const express = require("express");
 const router = express.Router();
 
-const { create, productById, read, remove, update, list, listRelated, listCategories, listBySearch, photo } = require("../controllers/product");
-const { requireSignin, isAuth, isAdmin } = require("../controllers/auth");
+const { create,
+		productById,
+		read,
+		remove,
+		update,
+		list,
+		listRelated,
+		listCategories,
+		listBySearch,
+		photo 
+	} = require("../controllers/product");
+
+const { requireSignin,
+		isAuth,
+		isAdmin 
+	} = require("../controllers/auth");
+
 const { userById } = require("../controllers/user");
 
 router.get("/product/:productId", read);
