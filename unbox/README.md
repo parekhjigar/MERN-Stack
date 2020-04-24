@@ -82,3 +82,7 @@ Nodemon automatically restarts the node application when file changes in the dir
 ### Installing lodash
 
 	`$ npm i lodash'
+
+### Installing cors
+
+	`$ npm i cors'
