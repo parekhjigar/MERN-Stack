@@ -25,7 +25,7 @@ exports.signin = (req, res) => {
 	User.findOne({email}, (err, user) => {
 		if(err || !user) {
 			return res.status(400).json({
-				err: "User with this email does not exist!"
+				error: "User with this email does not exist!"
 			});
 		}
 		// Todo: Create authenticate method in user model
