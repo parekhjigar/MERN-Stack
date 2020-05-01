@@ -36,6 +36,7 @@ export const createProduct = (userId, token, product) => {
         });
 };
 
+
 export const getCategory = categoryId => {
     return fetch(`${API}/category/${categoryId}`, {
         method: 'GET'
@@ -45,6 +46,7 @@ export const getCategory = categoryId => {
         })
         .catch(err => console.log(err));
 };
+
 
 export const getCategories = () => {
     return fetch(`${API}/categories`, {

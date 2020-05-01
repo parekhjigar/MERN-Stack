@@ -12,7 +12,6 @@ const AddCategory = () => {
     // Destructuring user and tokem from local storage
     const {user, token} = isAuthenticated();
     
-
     const handleChange = (e) => {
         setError("");
         setName(e.target.value);
