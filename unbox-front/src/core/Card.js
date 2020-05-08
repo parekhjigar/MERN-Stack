@@ -10,7 +10,7 @@ const Card = ({product}) => {
                     <p>{product.description}</p>
                     <p>{product.price}</p>
                     <Link to="/">
-                        <button className="btn btn-outline-primary mt-2 mb-2 card-btn-1">
+                        <button className="btn btn-outline-primary mt-2 mb-2 mr-2 card-btn-1">
                             View Product
                         </button>
                     </Link>
