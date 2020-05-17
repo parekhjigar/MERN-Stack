@@ -96,10 +96,10 @@ const Shop = () => {
     };
 
     return (
-        <Layout title="Shop Page" description="Search and explore some diary designs" className="container-fluid">
+        <Layout title="Customize Diaries" description="Search and explore some diary designs, and select colour and font-style" className="container-fluid">
             <div className="row">
                 <div className="col-4">
-                    <h4>Filter by categories</h4>
+                    <h4>Select Colour and Font-Style</h4>
                     <ul>
                         <Checkbox
                             categories={categories}
