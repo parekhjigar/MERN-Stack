@@ -7,6 +7,7 @@ import { addItem } from './cartHelpers';
 const Card = ({
     product,
     showViewProductButton = true,
+    showAddToCartButton = true
     
 }) => {
 
@@ -34,11 +35,13 @@ const Card = ({
       }
     };
     
-    const showAddToCartBtn = () => {
+    const showAddToCartBtn = (showAddToCartButton) => {
         return ( 
+          showAddToCartButton && (
             <button onClick={addToCart} className="btn btn-outline-warning mt-2 mb-2 card-btn-1  ">
-              Add to cart
-            </button>   
+                Add to cart
+              </button>
+          )          
         );
     };
     
@@ -66,7 +69,7 @@ const Card = ({
                 <br/>
                     
                 {showViewButton(showViewProductButton)}
-                {showAddToCartBtn()}
+                {showAddToCartBtn(showAddToCartButton)}
 
                 
                 </div>               
