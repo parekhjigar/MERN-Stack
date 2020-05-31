@@ -36,7 +36,7 @@ const Home = () => {
     }, []);
 
     return (
-        <Layout title="Home Page" description="Unbox diary market" className="container-fluid">
+        <Layout title="Home Page" description="Unbox Diary Market" className="container-fluid">
             <Search />
             <h2 className="mb-4">Newly arrived Diaries</h2>
             <div className="row">

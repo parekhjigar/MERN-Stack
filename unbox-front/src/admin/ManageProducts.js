@@ -35,7 +35,7 @@ const ManageProducts = () => {
 
     return (
         <Layout
-            title="Manage Products"
+            title="Manage Diaries"
             description="Update or delete diaries"
             className="container-fluid"
         >
