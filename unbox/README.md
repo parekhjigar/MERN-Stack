@@ -86,3 +86,7 @@ Nodemon automatically restarts the node application when file changes in the dir
 ### Installing cors
 
 	`$ npm i cors'
+
+### Installing braintree
+
+	`$ npm braintree'
