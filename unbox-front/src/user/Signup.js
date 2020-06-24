@@ -89,7 +89,7 @@ const Signup = () => {
     return (
         <Layout
             title="Sign up"
-            description="Sign up to Unbox Diary Market"
+            description="Sign up to Unbox Market"
             className="container col-md-8 offset-md-2"
         >
             {showSuccess()}

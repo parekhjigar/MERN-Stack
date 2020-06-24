@@ -30,7 +30,7 @@ const Menu = ({history}) => (
                     style={isActive(history, '/shop')}
                     to="/shop"
                 >
-                    Customize
+                    Shop
                 </Link>
             </li>
 

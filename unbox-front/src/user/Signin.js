@@ -93,7 +93,7 @@ const Signin = () => {
     return (
         <Layout
             title="Sign in"
-            description="Sign in to Unbox Diary Market"
+            description="Sign in to Unbox Market"
             className="container col-md-8 offset-md-2"
         >
             {showLoading()}

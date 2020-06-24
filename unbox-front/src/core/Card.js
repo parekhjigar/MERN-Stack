@@ -90,7 +90,7 @@ const Card = ({
             }}
             className="btn btn-outline-danger mt-2 mb-2"
           >
-            Remove Diary
+            Remove Product
           </button>
         )
       );

@@ -126,18 +126,6 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
                         />
                     </div>
 
-                    <div className="gorm-group mb-3">
-                        <label className="text-muted">Delivery type: Standard</label>
-                        <input type="checkbox"  
-                            className="form-control"                        
-                        />
-                        <label className="text-muted">Delivery type: Express</label>
-                        <input type="checkbox"  
-                            className="form-control"
-                           
-                        />
-                    </div>
-
                     <DropIn
                         options={{
                             authorization: data.clientToken,
@@ -147,13 +135,6 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
                         }}
                         onInstance={instance => (data.instance = instance)}
                     />
-
-                    <div className="gorm-group mb-3">
-                        <label className="text-muted">Save card:</label>
-                        <input type="checkbox"  
-                            className="form-control"
-                        />
-                    </div>
 
                     <button onClick={buy} className="btn btn-success btn-block">
                         Pay

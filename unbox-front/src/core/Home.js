@@ -36,9 +36,9 @@ const Home = () => {
     }, []);
 
     return (
-        <Layout title="Home Page" description="Unbox Diary Market" className="container-fluid">
+        <Layout title="Home Page" description="Unbox Market" className="container-fluid">
             <Search />
-            <h2 className="mb-4">Newly arrived Diaries</h2>
+            <h2 className="mb-4">Newly arrived Products</h2>
             <div className="row">
                 {productsByArrival.map((product, i) => (
                     <div key={i} className="col-4 mb-3">
@@ -47,7 +47,7 @@ const Home = () => {
                 ))}
             </div>
 
-            <h2 className="mb-4">Best selling Diaries</h2>
+            <h2 className="mb-4">Best selling Products</h2>
             <div className="row">
                 {productsByArrival.map((product, i) => (
                     <div key={i} className="col-4 mb-3">
