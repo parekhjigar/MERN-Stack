@@ -188,7 +188,7 @@ const UpdateProduct = ({ match }) => {
     };
 
     return (
-        <Layout title="Update the diary" description="Fill up all fields">
+        <Layout title="Update the product" description="Fill up all fields">
             <div className="row">
                 <div className="col-md-8 offset-md-2">
                     {showLoading()}

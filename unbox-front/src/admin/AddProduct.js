@@ -143,7 +143,7 @@ const AddProduct = () => {
                 </select>           
             </div>
 
-            <button className="btn btn-outline-primary">Create Diary</button>
+            <button className="btn btn-outline-primary">Create Product</button>
 
         </form>
     )
@@ -170,7 +170,7 @@ const AddProduct = () => {
 
     return (
         <Layout
-            title="Add a new Diary"
+            title="Add a new Product"
             description={`Welcome ${user.name}!`}
         >
             <div className="row">

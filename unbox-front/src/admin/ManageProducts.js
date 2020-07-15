@@ -35,14 +35,14 @@ const ManageProducts = () => {
 
     return (
         <Layout
-            title="Manage Diaries"
-            description="Update or delete diaries"
+            title="Manage Products"
+            description="Update or delete products"
             className="container-fluid"
         >
             <div className="row">
                 <div className="col-12">
                     <h2 className="text-center">
-                        Total {products.length} diaries
+                        Total {products.length} products
                     </h2>
                     <hr />
                     <ul className="list-group">

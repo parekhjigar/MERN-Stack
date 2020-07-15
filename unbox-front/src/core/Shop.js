@@ -96,7 +96,7 @@ const Shop = () => {
     };
 
     return (
-        <Layout title="Customize Diaries" description="Search and explore products" className="container-fluid">
+        <Layout title="Shop Products" description="Explore variey of products by categories and price" className="container-fluid">
             <div className="row">
                 <div className="col-4">
                     <h4>Categories</h4>
