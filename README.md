@@ -3,6 +3,12 @@
 The following project is developed on MacOS Catalina.
 Following packages are required to create the environment for the project.
 
+![Screenshot-1](Screenshot-1.png)
+
+![Screenshot-2](Screenshot-2.png)
+
+![Screenshot-3](Screenshot-3.png)
+
 ## Initializing Package.json
 
 	`$ npm init -y`
